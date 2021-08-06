@@ -12,5 +12,26 @@ oc apply -f channel.yaml
 
 Appliquer ensuite le label multitenant-rbac=yes sur le ou les clusters souhaités. 
 
+### Définition des roles
+
+#### groupe: demo-rbac-developpeurs
+
+Accès complet au projet multitenant-rbac-dev
+Accès limité au projet multitenant-rbac-preprod
+Aucun accès au projet multitenant-rbac-prod
+
+#### groupe: demo-rbac-operations
+
+Accès limité au projet multitenant-rbac-dev
+Accès limité au projet multitenant-rbac-preprod
+Accès limité au projet multitenant-rbac-prod
+
+#### groupe: demo-rbac-tests
+
+Aucun accès au projet multitenant-rbac-dev
+Accès limité au projet multitenant-rbac-preprod
+Aucun accès au projet multitenant-rbac-prod
+
+
 ### Demo script
 
