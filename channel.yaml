@@ -8,4 +8,4 @@ metadata:
     apps.open-cluster-management.io/webhook-enabled: "true"
 spec:
     type: Git
-    pathname: https://github.com/marouim/acm-deploy-integration.git
+    pathname: https://github.com/marouim/multitenant-rbac.git
