@@ -1,0 +1,45 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: Policy
+metadata:
+  name: multitenant-rbac
+  namespace: default
+  annotations:
+    policy.open-cluster-management.io/categories: Securité infrastructure
+    policy.open-cluster-management.io/controls: Configurations
+    policy.open-cluster-management.io/standards: Configurations
+spec:
+  remediationAction: enforce
+  disabled: false
+  policy-templates:
+    - objectDefinition:
+        apiVersion: policy.open-cluster-management.io/v1
+        kind: ConfigurationPolicy
+        metadata:
+          name: multitenant-rbac-projects
+        spec:
+          remediationAction: inform
+          severity: low
+          object-templates:
+            - complianceType: musthave
+              objectDefinition:
+
+                apiVersion: project.openshift.io/v1
+                kind: Project
+                metadata:
+                  name: multitenant-rbac-dev
+
+            - complianceType: musthave
+              objectDefinition:
+
+                apiVersion: project.openshift.io/v1
+                kind: Project
+                metadata:
+                  name: multitenant-rbac-preprod
+
+            - complianceType: musthave
+              objectDefinition:
+
+                apiVersion: project.openshift.io/v1
+                kind: Project
+                metadata:
+                  name: multitenant-rbac-prod
