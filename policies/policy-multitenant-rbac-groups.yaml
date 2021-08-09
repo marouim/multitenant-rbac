@@ -1,7 +1,7 @@
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
-  name: multitenant-rbac
+  name: multitenant-rbac-groups
   namespace: default
   annotations:
     policy.open-cluster-management.io/categories: Securité infrastructure
@@ -15,7 +15,7 @@ spec:
         apiVersion: policy.open-cluster-management.io/v1
         kind: ConfigurationPolicy
         metadata:
-          name: multitenant-rbac-projects
+          name: multitenant-rbac-groups
         spec:
           remediationAction: inform
           severity: low
@@ -23,23 +23,29 @@ spec:
             - complianceType: musthave
               objectDefinition:
 
-                apiVersion: project.openshift.io/v1
-                kind: Project
+                kind: Group
+                apiVersion: user.openshift.io/v1
                 metadata:
-                  name: multitenant-rbac-dev
+                  name: demo-rbac-developpeurs
+                users:
+                  - demo-rbac-dev
 
             - complianceType: musthave
               objectDefinition:
 
-                apiVersion: project.openshift.io/v1
-                kind: Project
+                kind: Group
+                apiVersion: user.openshift.io/v1
                 metadata:
-                  name: multitenant-rbac-preprod
+                  name: demo-rbac-operations
+                users:
+                  - demo-rbac-ops
 
             - complianceType: musthave
               objectDefinition:
 
-                apiVersion: project.openshift.io/v1
-                kind: Project
+                kind: Group
+                apiVersion: user.openshift.io/v1
                 metadata:
-                  name: multitenant-rbac-prod
+                  name: demo-rbac-testeurs
+                users:
+                  - demo-rbac-tst

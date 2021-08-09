@@ -9,6 +9,11 @@ placementRef:
   apiGroup: apps.open-cluster-management.io
 
 subjects:
-- name: multitenant-rbac
+
+- name: multitenant-rbac-groups
+  kind: Policy
+  apiGroup: policy.open-cluster-management.io
+
+- name: multitenant-rbac-roles
   kind: Policy
   apiGroup: policy.open-cluster-management.io
