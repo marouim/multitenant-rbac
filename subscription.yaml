@@ -6,8 +6,8 @@ metadata:
     apps.open-cluster-management.io/git-path: /policies
     apps.open-cluster-management.io/reconcile-rate: high
   name: multitenant-rbac
-  namespace: acm-channels
+  namespace: open-cluster-management
 spec:
-  channel: acm-channels/multitenant-rbac
+  channel: open-cluster-management/multitenant-rbac
   placement:
     local: true
