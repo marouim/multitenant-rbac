@@ -7,5 +7,5 @@ metadata:
     apps.open-cluster-management.io/reconcile-rate: high
     apps.open-cluster-management.io/webhook-enabled: "true"
 spec:
-    type: Git
+    type: GitHub
     pathname: https://github.com/marouim/multitenant-rbac.git
