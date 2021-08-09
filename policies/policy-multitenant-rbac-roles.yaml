@@ -2,7 +2,6 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
 metadata:
   name: multitenant-rbac-roles
-  namespace: acm-policies
   annotations:
     policy.open-cluster-management.io/categories: Securité infrastructure
     policy.open-cluster-management.io/controls: Configurations
