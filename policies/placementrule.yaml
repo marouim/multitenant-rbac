@@ -9,4 +9,4 @@ spec:
     type: ManagedClusterConditionAvailable
   clusterSelector:
     matchExpressions:
-      - {key: multitenant-rbac, operator: In, values: ["yes"]}
+      - {key: integrations-rbac, operator: In, values: ["yes"]}
