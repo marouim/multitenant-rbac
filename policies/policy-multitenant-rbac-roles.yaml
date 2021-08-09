@@ -28,7 +28,7 @@ spec:
                 kind: RoleBinding
                 apiVersion: rbac.authorization.k8s.io/v1
                 metadata:
-                  name: demo-rback-binding-developpeurs-dev-admin
+                  name: demo-rbac-binding-developpeurs-dev-admin
                 subjects:
                   - kind: Group
                     name: demo-rbac-developpeurs
@@ -55,7 +55,7 @@ spec:
                 kind: RoleBinding
                 apiVersion: rbac.authorization.k8s.io/v1
                 metadata:
-                  name: demo-rback-binding-operations-prod-admin
+                  name: demo-rbac-binding-operations-prod-admin
                 subjects:
                   - kind: Group
                     name: demo-rbac-operations
@@ -82,7 +82,7 @@ spec:
                 kind: RoleBinding
                 apiVersion: rbac.authorization.k8s.io/v1
                 metadata:
-                  name: demo-rback-binding-testeurs-preprod-admin
+                  name: demo-rbac-binding-testeurs-preprod-admin
                 subjects:
                   - kind: Group
                     name: demo-rbac-operations
