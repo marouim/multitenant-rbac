@@ -132,7 +132,15 @@ spec:
                   - get
                   - list
                   - watch
-
+                - apiGroups:
+                  - ""
+                  resources:
+                  - serviceaccounts
+                  verbs:
+                  - get
+                  - list
+                  - watch
+                  
             - complianceType: musthave
               objectDefinition:
 
