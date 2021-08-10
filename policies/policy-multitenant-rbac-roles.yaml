@@ -124,10 +124,7 @@ spec:
                 - apiGroups:
                   - rbac.authorization.k8s.io
                   resources:
-                  - Role
-                  - RoleBinding
-                  - ClusterRole
-                  - clusterRoleBinding
+                  - "*"
                   verbs:
                   - get
                   - list
@@ -140,7 +137,7 @@ spec:
                   - get
                   - list
                   - watch
-                  
+
             - complianceType: musthave
               objectDefinition:
 
