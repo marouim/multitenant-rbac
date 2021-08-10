@@ -50,7 +50,7 @@ spec:
             - "integrations-prod"
           object-templates:
 
-            - complianceType: musthave
+            - complianceType: mustonlyhave
               objectDefinition:
 
                 apiVersion: rbac.authorization.k8s.io/v1
